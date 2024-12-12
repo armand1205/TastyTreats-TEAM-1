@@ -185,12 +185,12 @@
   text-align: center;
 }
 .nav-link {
-  color: var(--txt-color);
+  color: #050505;
   font-size: 12px;
   line-height: 1.25;
 }
 .mobile-menu .current-mob {
-  color: var(--current-mob);
+  color: #ffffff;
 }
 
 .theme-switcher.burger {
