@@ -1,16 +1,81 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <h1>Example title</h1>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+<html lang="en">
 
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Modal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <button id="openModalBtn">Open Recipe Modal</button>
+
+  <div class="recipe-backdrop is-hidden" id="modalBackdrop">
+    <div id="modal-recipe" class="modal-container">
+      <button class="btn-close" id="closeModalBtn">&times;</button>
+      <div class="wrap-recipe">
+        <div id="mediaContent" class="media-container">
+          <img id="recipeImage" alt="Recipe Image" class="is-hidden">
+          <video id="recipeVideo" controls class="is-hidden">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="recipe-details">
+          <h2 class="modal-title" id="recipeTitle">Recipe Name</h2>
+          <p id="recipeRating">Rating: 0</p>
+          <p id="recipeTime">Time: 0 mins</p>
+          <h4>Ingredients:</h4>
+          <ul id="ingredientsList">
+            <li>Ingredient 1 - Quantity</li>
+            <li>Ingredient 2 - Quantity</li>
+            <!-- Completează cu restul ingredientelor -->
+          </ul>
+        </div>
+      </div>
+      <div class="recipe-info">
+        <h4>Tags:</h4>
+        <ul id="tagsList">
+          <li>#tag1</li>
+          <li>#tag2</li>
+          <!-- Completează cu restul tagurilor -->
+        </ul>
+        <h4>Instructions:</h4>
+        <p id="recipeInstructions">Step-by-step instructions...</p>
+      </div>
+      <div class="btn-section">
+        <div class="btn">
+          <button id="toggleFavoriteBtn" class="btn-addToFavorite">Add to Favorites</button>
+          <button id="rateRecipeBtn" class="btn-giveARating">Give a Rating</button>
+        </div>
+      </div>
+      <!-- Formular de comandă -->
+      <div class="modal">
+        <span class="close">
+          <svg width="24" height="24">
+            <use class="hero-modal-close-icon" href="/SPRITE.690b4edd.svg#icon-x"></use>
+          </svg>
+        </span>
+        <h3 class="order-modal-title">Order now</h3>
+        <form class="order-form" id="order-form">
+          <label for="name" class="order-form-label">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name"
+            class="input-js name-form-valid order-form-input" required pattern="^[A-Za-z\s]+$">
+          <label for="phone" class="order-form-label">Phone number</label>
+          <input type="tel" id="phone" class="input-js order-form-input phone-form-valid" name="phone" pattern="^\+\d+$"
+            required placeholder="Enter your phone">
+          <label for="email" class="order-form-label">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email"
+            class="email-form-valid input-js order-form-input" required>
+          <label for="comment" class="order-form-label">Comment</label>
+          <textarea id="comment" name="comment" class="order-form-comment"></textarea>
+          <button type="submit" class="submit-btn" disabled>Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+
 </html>
