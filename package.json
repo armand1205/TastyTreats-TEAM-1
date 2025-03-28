@@ -1,21 +1,21 @@
 {
-  "name": "tasty-treats-team-project",
+  "name": "TastyTreats-TEAM-1",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://armand1205.github.io/tasty-treats-team-project",
+  "homepage": "https://armand1205.github.io/TastyTreats-TEAM-1",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /tasty-treats-team-project/"
+    "build": "parcel build src/*.html --public-url /TastyTreats-TEAM-1/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SonGlad/tasty-treats-team-project.git"
+    "url": "git+https://github.com/armand1205/TastyTreats-TEAM-1.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SonGlad/tasty-treats-team-project/issues"
+    "url": "https://github.com/armand1205/tasty-treats-team-project/issues"
   },
   "dependencies": {
     "axios": "^1.4.0",
